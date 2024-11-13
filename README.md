@@ -1,1 +1,2 @@
 # online-healthcare-management-system
+An Online Health Care Management System (OHCMS) is a digital platform that facilitates the management and delivery of healthcare services, connecting patients, healthcare providers, and administrative staff. By leveraging technology, it enables users to handle various healthcare-related tasks online, such as patient registration, scheduling, billing, medical records management, and more. These systems are often used by hospitals, clinics, and other healthcare providers to streamline workflows and improve the quality of care.
