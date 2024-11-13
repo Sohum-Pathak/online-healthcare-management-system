@@ -1,0 +1,199 @@
+<html>
+<head>
+<title>Reception.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Reception.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">healthcare</span><span class="s2">.</span><span class="s1">management</span><span class="s2">.</span><span class="s1">system</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">javax</span><span class="s2">.</span><span class="s1">swing</span><span class="s2">.*;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">awt</span><span class="s2">.*;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">awt</span><span class="s2">.</span><span class="s1">event</span><span class="s2">.</span><span class="s1">ActionEvent</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">awt</span><span class="s2">.</span><span class="s1">event</span><span class="s2">.</span><span class="s1">ActionListener</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Reception </span><span class="s0">extends </span><span class="s1">JFrame</span><span class="s2">{</span>
+
+    <span class="s1">Reception</span><span class="s2">(){</span>
+
+        <span class="s1">JPanel panel</span><span class="s2">= </span><span class="s0">new </span><span class="s1">JPanel</span><span class="s2">();</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">setLayout</span><span class="s2">(</span><span class="s0">null</span><span class="s2">);</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s3">5</span><span class="s2">,</span><span class="s3">160</span><span class="s2">,</span><span class="s3">1525</span><span class="s2">,</span><span class="s3">670</span><span class="s2">);</span>
+        <span class="s1">panel</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Color</span><span class="s2">(</span><span class="s3">109</span><span class="s2">,</span><span class="s3">164</span><span class="s2">,</span><span class="s3">170</span><span class="s2">));</span>
+        <span class="s1">add</span><span class="s2">(</span><span class="s1">panel</span><span class="s2">);</span>
+
+        <span class="s1">JPanel panel1</span><span class="s2">= </span><span class="s0">new </span><span class="s1">JPanel</span><span class="s2">();</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">setLayout</span><span class="s2">(</span><span class="s0">null</span><span class="s2">);</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s3">5</span><span class="s2">,</span><span class="s3">5</span><span class="s2">,</span><span class="s3">1525</span><span class="s2">,</span><span class="s3">150</span><span class="s2">);</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Color</span><span class="s2">(</span><span class="s3">109</span><span class="s2">,</span><span class="s3">164</span><span class="s2">,</span><span class="s3">170</span><span class="s2">));</span>
+        <span class="s1">add</span><span class="s2">(</span><span class="s1">panel1</span><span class="s2">);</span>
+
+        <span class="s1">ImageIcon i1</span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageIcon</span><span class="s2">(</span><span class="s1">ClassLoader</span><span class="s2">.</span><span class="s1">getSystemResource</span><span class="s2">(</span><span class="s4">&quot;icons/dr.png&quot;</span><span class="s2">));</span>
+        <span class="s1">Image image </span><span class="s2">=</span><span class="s1">i1</span><span class="s2">.</span><span class="s1">getImage</span><span class="s2">().</span><span class="s1">getScaledInstance</span><span class="s2">(</span><span class="s3">250</span><span class="s2">,</span><span class="s3">250</span><span class="s2">,</span><span class="s1">Image</span><span class="s2">.</span><span class="s1">SCALE_DEFAULT</span><span class="s2">);</span>
+        <span class="s1">ImageIcon i2</span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageIcon</span><span class="s2">(</span><span class="s1">image</span><span class="s2">);</span>
+        <span class="s1">JLabel label </span><span class="s2">=</span><span class="s0">new </span><span class="s1">JLabel</span><span class="s2">(</span><span class="s1">i2</span><span class="s2">);</span>
+        <span class="s1">label</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s3">1300</span><span class="s2">,</span><span class="s3">0</span><span class="s2">,</span><span class="s3">250</span><span class="s2">,</span><span class="s3">250</span><span class="s2">);</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">label</span><span class="s2">);</span>
+
+        <span class="s1">ImageIcon i11</span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageIcon</span><span class="s2">(</span><span class="s1">ClassLoader</span><span class="s2">.</span><span class="s1">getSystemResource</span><span class="s2">(</span><span class="s4">&quot;icons/amb.png&quot;</span><span class="s2">));</span>
+        <span class="s1">Image image1 </span><span class="s2">=</span><span class="s1">i11</span><span class="s2">.</span><span class="s1">getImage</span><span class="s2">().</span><span class="s1">getScaledInstance</span><span class="s2">(</span><span class="s3">300</span><span class="s2">,</span><span class="s3">100</span><span class="s2">,</span><span class="s1">Image</span><span class="s2">.</span><span class="s1">SCALE_DEFAULT</span><span class="s2">);</span>
+        <span class="s1">ImageIcon i22</span><span class="s2">= </span><span class="s0">new </span><span class="s1">ImageIcon</span><span class="s2">(</span><span class="s1">image1</span><span class="s2">);</span>
+        <span class="s1">JLabel label1 </span><span class="s2">=</span><span class="s0">new </span><span class="s1">JLabel</span><span class="s2">(</span><span class="s1">i22</span><span class="s2">);</span>
+        <span class="s1">label1</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s3">1000</span><span class="s2">,</span><span class="s3">50</span><span class="s2">,</span><span class="s3">300</span><span class="s2">,</span><span class="s3">100</span><span class="s2">);</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">label1</span><span class="s2">);</span>
+
+        <span class="s1">JButton btn1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s4">&quot;Add New Patient&quot;</span><span class="s2">);</span>
+        <span class="s1">btn1</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s3">30</span><span class="s2">,</span><span class="s3">15</span><span class="s2">,</span><span class="s3">200</span><span class="s2">,</span><span class="s3">30</span><span class="s2">);</span>
+        <span class="s1">btn1</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Color</span><span class="s2">(</span><span class="s3">246</span><span class="s2">,</span><span class="s3">215</span><span class="s2">,</span><span class="s3">118</span><span class="s2">));</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">btn1</span><span class="s2">);</span>
+        <span class="s1">btn1</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s0">new </span><span class="s1">ActionListener</span><span class="s2">() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed</span><span class="s2">(</span><span class="s1">ActionEvent e</span><span class="s2">) {</span>
+                <span class="s0">new </span><span class="s1">NEW_PATIENT</span><span class="s2">();</span>
+
+            <span class="s2">}</span>
+        <span class="s2">});</span>
+
+        <span class="s1">JButton btn2 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s4">&quot;Room&quot;</span><span class="s2">);</span>
+        <span class="s1">btn2</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s3">30</span><span class="s2">,</span><span class="s3">58</span><span class="s2">,</span><span class="s3">200</span><span class="s2">,</span><span class="s3">30</span><span class="s2">);</span>
+        <span class="s1">btn2</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Color</span><span class="s2">(</span><span class="s3">246</span><span class="s2">,</span><span class="s3">215</span><span class="s2">,</span><span class="s3">118</span><span class="s2">));</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">btn2</span><span class="s2">);</span>
+        <span class="s1">btn2</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s0">new </span><span class="s1">ActionListener</span><span class="s2">() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed</span><span class="s2">(</span><span class="s1">ActionEvent e</span><span class="s2">) {</span>
+
+            <span class="s2">}</span>
+        <span class="s2">});</span>
+
+        <span class="s1">JButton btn3 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s4">&quot;Department&quot;</span><span class="s2">);</span>
+        <span class="s1">btn3</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s3">30</span><span class="s2">,</span><span class="s3">100</span><span class="s2">,</span><span class="s3">200</span><span class="s2">,</span><span class="s3">30</span><span class="s2">);</span>
+        <span class="s1">btn3</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Color</span><span class="s2">(</span><span class="s3">246</span><span class="s2">,</span><span class="s3">215</span><span class="s2">,</span><span class="s3">118</span><span class="s2">));</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">btn3</span><span class="s2">);</span>
+        <span class="s1">btn3</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s0">new </span><span class="s1">ActionListener</span><span class="s2">() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed</span><span class="s2">(</span><span class="s1">ActionEvent e</span><span class="s2">) {</span>
+
+            <span class="s2">}</span>
+        <span class="s2">});</span>
+
+        <span class="s1">JButton btn4 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s4">&quot;All Employee Info&quot;</span><span class="s2">);</span>
+        <span class="s1">btn4</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s3">270</span><span class="s2">,</span><span class="s3">15</span><span class="s2">,</span><span class="s3">200</span><span class="s2">,</span><span class="s3">30</span><span class="s2">);</span>
+        <span class="s1">btn4</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Color</span><span class="s2">(</span><span class="s3">246</span><span class="s2">,</span><span class="s3">215</span><span class="s2">,</span><span class="s3">118</span><span class="s2">));</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">btn4</span><span class="s2">);</span>
+        <span class="s1">btn4</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s0">new </span><span class="s1">ActionListener</span><span class="s2">() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed</span><span class="s2">(</span><span class="s1">ActionEvent e</span><span class="s2">) {</span>
+
+            <span class="s2">}</span>
+        <span class="s2">});</span>
+
+        <span class="s1">JButton btn5 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s4">&quot;Patient Information&quot;</span><span class="s2">);</span>
+        <span class="s1">btn5</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s3">270</span><span class="s2">,</span><span class="s3">58</span><span class="s2">,</span><span class="s3">200</span><span class="s2">,</span><span class="s3">30</span><span class="s2">);</span>
+        <span class="s1">btn5</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Color</span><span class="s2">(</span><span class="s3">246</span><span class="s2">,</span><span class="s3">215</span><span class="s2">,</span><span class="s3">118</span><span class="s2">));</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">btn5</span><span class="s2">);</span>
+        <span class="s1">btn5</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s0">new </span><span class="s1">ActionListener</span><span class="s2">() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed</span><span class="s2">(</span><span class="s1">ActionEvent e</span><span class="s2">) {</span>
+
+            <span class="s2">}</span>
+        <span class="s2">});</span>
+
+        <span class="s1">JButton btn6 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s4">&quot;Patient Discharge&quot;</span><span class="s2">);</span>
+        <span class="s1">btn6</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s3">270</span><span class="s2">,</span><span class="s3">100</span><span class="s2">,</span><span class="s3">200</span><span class="s2">,</span><span class="s3">30</span><span class="s2">);</span>
+        <span class="s1">btn6</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Color</span><span class="s2">(</span><span class="s3">246</span><span class="s2">,</span><span class="s3">215</span><span class="s2">,</span><span class="s3">118</span><span class="s2">));</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">btn6</span><span class="s2">);</span>
+        <span class="s1">btn6</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s0">new </span><span class="s1">ActionListener</span><span class="s2">() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed</span><span class="s2">(</span><span class="s1">ActionEvent e</span><span class="s2">) {</span>
+
+            <span class="s2">}</span>
+        <span class="s2">});</span>
+
+        <span class="s1">JButton btn7 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s4">&quot;Update Patient detail&quot;</span><span class="s2">);</span>
+        <span class="s1">btn7</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s3">510</span><span class="s2">,</span><span class="s3">15</span><span class="s2">,</span><span class="s3">200</span><span class="s2">,</span><span class="s3">30</span><span class="s2">);</span>
+        <span class="s1">btn7</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Color</span><span class="s2">(</span><span class="s3">246</span><span class="s2">,</span><span class="s3">215</span><span class="s2">,</span><span class="s3">118</span><span class="s2">));</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">btn7</span><span class="s2">);</span>
+        <span class="s1">btn7</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s0">new </span><span class="s1">ActionListener</span><span class="s2">() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed</span><span class="s2">(</span><span class="s1">ActionEvent e</span><span class="s2">) {</span>
+
+            <span class="s2">}</span>
+        <span class="s2">});</span>
+
+        <span class="s1">JButton btn8 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s4">&quot;Hospital Ambulance&quot;</span><span class="s2">);</span>
+        <span class="s1">btn8</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s3">510</span><span class="s2">,</span><span class="s3">58</span><span class="s2">,</span><span class="s3">200</span><span class="s2">,</span><span class="s3">30</span><span class="s2">);</span>
+        <span class="s1">btn8</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Color</span><span class="s2">(</span><span class="s3">246</span><span class="s2">,</span><span class="s3">215</span><span class="s2">,</span><span class="s3">118</span><span class="s2">));</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">btn8</span><span class="s2">);</span>
+        <span class="s1">btn8</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s0">new </span><span class="s1">ActionListener</span><span class="s2">() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed</span><span class="s2">(</span><span class="s1">ActionEvent e</span><span class="s2">) {</span>
+
+            <span class="s2">}</span>
+        <span class="s2">});</span>
+
+        <span class="s1">JButton btn9 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s4">&quot;Search Room&quot;</span><span class="s2">);</span>
+        <span class="s1">btn9</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s3">510</span><span class="s2">,</span><span class="s3">100</span><span class="s2">,</span><span class="s3">200</span><span class="s2">,</span><span class="s3">30</span><span class="s2">);</span>
+        <span class="s1">btn9</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Color</span><span class="s2">(</span><span class="s3">246</span><span class="s2">,</span><span class="s3">215</span><span class="s2">,</span><span class="s3">118</span><span class="s2">));</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">btn9</span><span class="s2">);</span>
+        <span class="s1">btn9</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s0">new </span><span class="s1">ActionListener</span><span class="s2">() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed</span><span class="s2">(</span><span class="s1">ActionEvent e</span><span class="s2">) {</span>
+
+            <span class="s2">}</span>
+        <span class="s2">});</span>
+
+        <span class="s1">JButton btn10 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">JButton</span><span class="s2">(</span><span class="s4">&quot;Logout&quot;</span><span class="s2">);</span>
+        <span class="s1">btn10</span><span class="s2">.</span><span class="s1">setBounds</span><span class="s2">(</span><span class="s3">750</span><span class="s2">,</span><span class="s3">15</span><span class="s2">,</span><span class="s3">200</span><span class="s2">,</span><span class="s3">30</span><span class="s2">);</span>
+        <span class="s1">btn10</span><span class="s2">.</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Color</span><span class="s2">(</span><span class="s3">246</span><span class="s2">,</span><span class="s3">215</span><span class="s2">,</span><span class="s3">118</span><span class="s2">));</span>
+        <span class="s1">panel1</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">btn10</span><span class="s2">);</span>
+        <span class="s1">btn10</span><span class="s2">.</span><span class="s1">addActionListener</span><span class="s2">(</span><span class="s0">new </span><span class="s1">ActionListener</span><span class="s2">() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">actionPerformed</span><span class="s2">(</span><span class="s1">ActionEvent e</span><span class="s2">) {</span>
+
+            <span class="s2">}</span>
+        <span class="s2">});</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <span class="s1">setSize</span><span class="s2">(</span><span class="s3">1950</span><span class="s2">,</span><span class="s3">1098</span><span class="s2">);</span>
+        <span class="s1">getContentPane</span><span class="s2">().</span><span class="s1">setBackground</span><span class="s2">(</span><span class="s1">Color</span><span class="s2">.</span><span class="s1">WHITE</span><span class="s2">);</span>
+        <span class="s1">setLayout</span><span class="s2">(</span><span class="s0">null</span><span class="s2">);</span>
+        <span class="s1">setVisible</span><span class="s2">(</span><span class="s0">true</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[]</span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s0">new </span><span class="s1">Reception</span><span class="s2">();</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
