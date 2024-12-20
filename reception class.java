@@ -145,33 +145,12 @@ public class Reception extends JFrame{
 
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
         setSize(1950,1098);
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
         setVisible(true);
     }
-
-
-
     public static void main(String[]args) {
         new Reception();
     }
